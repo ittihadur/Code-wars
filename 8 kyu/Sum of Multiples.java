@@ -1,5 +1,29 @@
-package 8 kyu;
+// Find the sum of all multiples of n below m
 
-public class Sum of Multiples {
-    
+// Keep in Mind
+// n and m should be natural numbers (positive integers). Otherwise, see the examples in your language about how to handle invalid input values.
+// m is excluded from the multiples
+// Examples
+// Kata.sumMul(2, 9)   ==> 2 + 4 + 6 + 8 = 20
+// Kata.sumMul(3, 13)  ==> 3 + 6 + 9 + 12 = 30
+// Kata.sumMul(4, 123) ==> 4 + 8 + 12 + ... = 1860
+// Kata.sumMul(4, -7)  // throws IllegalArgumentException
+
+// Solution
+public class Kata {
+    public static long sumMul(int n, int m) {
+      if ((n >=1) && (m>=1)){
+        int total =0;
+        for (int i = n; i < m; i += n) {
+                total += i;
+            }
+            return total;
+        
+      }else{
+        
+        
+        
+        throw new IllegalArgumentException("IllegalArgumentException");
+      }
+    }
 }
